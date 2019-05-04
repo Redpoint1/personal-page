@@ -1,15 +1,15 @@
 {
-  "name": "personal",
+  "name": "personal-page",
   "version": "0.1.0",
   "private": true,
   "author": "Richard Rozar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Redpoint1/personal/issues"
+    "url": "https://github.com/Redpoint1/personal-page/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Redpoint1/personal.git"
+    "url": "git+https://github.com/Redpoint1/personal-page.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
