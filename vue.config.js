@@ -8,5 +8,6 @@ process.env.VUE_APP_COPYRIGHT = new Date().getFullYear();
 module.exports = {
   css: {
     sourceMap: true
-  }
+  },
+  assetsDir: "static"
 };
