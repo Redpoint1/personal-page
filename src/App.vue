@@ -9,5 +9,13 @@
 </template>
 
 <style lang="scss">
-@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+
+main {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
 </style>
