@@ -37,6 +37,7 @@
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "conventional-changelog-custom": "git+ssh://git@github.com/Redpoint1/conventional-changelog-custom.git",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^2.2.0",
@@ -83,7 +84,8 @@
     "rules": {
       "type-enum": [
         2,
-        "always", [
+        "always",
+        [
           "build",
           "breaking",
           "ci",
@@ -102,6 +104,6 @@
   },
   "standard-version": {
     "message": "release: %s",
-    "preset": "./utils/preset/index.js"
+    "preset": "custom"
   }
 }
