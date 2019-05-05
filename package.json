@@ -15,7 +15,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "release": "standard-version",
+    "release": "standard-version -m 'build(release): %s'",
     "publish": "git push --follow-tags origin master"
   },
   "dependencies": {
@@ -77,6 +77,8 @@
     }
   },
   "commitlint": {
-    "extends": ["@commitlint/config-angular"]
+    "extends": [
+      "@commitlint/config-angular"
+    ]
   }
 }
