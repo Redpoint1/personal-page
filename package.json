@@ -79,6 +79,29 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-angular"
-    ]
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always", [
+          "build",
+          "breaking",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "release",
+          "revert",
+          "style",
+          "test"
+        ]
+      ]
+    }
+  },
+  "standard-version": {
+    "message": "release: %s",
+    "preset": "./utils/preset/index.js"
   }
 }
