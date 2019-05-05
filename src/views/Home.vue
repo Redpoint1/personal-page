@@ -35,9 +35,11 @@ export default class App extends Vue {}
   height: 25vw;
   min-height: 100px;
   max-height: 200px;
+  transition: fill 1s;
+  fill: #777;
 
   &:hover {
-    fill: red;
+    fill: #000;
   }
 }
 </style>
