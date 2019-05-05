@@ -16,7 +16,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "release": "standard-version",
-    "publish": "git push --follow-tags origin master"
+    "publish": "git push --tags"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
