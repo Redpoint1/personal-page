@@ -16,7 +16,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "release": "standard-version",
-    "publish": "git push --tags",
+    "publish": "git push --tag && conventional-github-releaser -p custom",
     "sync": "rsync --chown www-data:www-data -av --progress ./dist/ root@remote.local:/var/www/html"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "conventional-changelog-custom": "Redpoint1/conventional-changelog-custom#semver:^1.0.0",
+    "conventional-github-releaser": "^3.1.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^2.2.0",
