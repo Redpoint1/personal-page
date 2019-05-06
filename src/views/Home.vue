@@ -28,7 +28,7 @@
   height: 25vw;
   min-height: 100px;
   max-height: 200px;
-  transition: fill 1s;
+  transition: fill .5s;
   fill: #777;
 
   &:hover {
