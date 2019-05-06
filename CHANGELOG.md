@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.2](https://github.com/Redpoint1/personal-page/compare/v0.1.1...v0.1.2) (2019-05-06)
+
+
+### Changes
+
+* inline svg brands in html instead of js ([17d94ce](https://github.com/Redpoint1/personal-page/commit/17d94ce))
+
+
+
 ## 0.1.1 (2019-05-05)
 
 
