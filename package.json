@@ -38,8 +38,10 @@
     "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "commitizen": "^3.1.1",
     "conventional-changelog-custom": "Redpoint1/conventional-changelog-custom#semver:^1.0.0",
     "conventional-github-releaser": "^3.1.2",
+    "cz-customizable": "^6.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^2.2.0",
@@ -77,6 +79,7 @@
   ],
   "husky": {
     "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git-cz --hook",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -109,5 +112,10 @@
   "standard-version": {
     "message": "release: %s",
     "preset": "custom"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
