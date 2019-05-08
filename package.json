@@ -1,6 +1,6 @@
 {
   "name": "personal-page",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "author": "Richard Rozar",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "commit" "git-cz",
+    "commit": "git-cz",
     "release": "standard-version",
     "publish": "git push --tag && conventional-github-releaser -p custom",
     "sync": "rsync --chown www-data:www-data -av --progress ./dist/ root@remote.local:/var/www/html"

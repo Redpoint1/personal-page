@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.2.0](https://github.com/Redpoint1/personal-page/compare/v0.1.2...v0.2.0) (2019-05-08)
+
+
+### Changes
+
+* **js:** add .active for menu item by vue-router ([063a0bf](https://github.com/Redpoint1/personal-page/commit/063a0bf))
+* **js:** delete unused HelloWorld.vue ([b975439](https://github.com/Redpoint1/personal-page/commit/b975439))
+* **svg:** .brand:hover transition-duration reduced to 0.5s ([f96ce65](https://github.com/Redpoint1/personal-page/commit/f96ce65))
+* **ui:** add margin between brands, change size limit for .brand ([5b48d5e](https://github.com/Redpoint1/personal-page/commit/5b48d5e))
+* **ui:** rearrange footer items ([e188e42](https://github.com/Redpoint1/personal-page/commit/e188e42))
+* **ui:** remove 'v' from version number in the footer ([0bf1cbf](https://github.com/Redpoint1/personal-page/commit/0bf1cbf))
+
+
+### Features
+
+* **ui:** add navigation ([23587df](https://github.com/Redpoint1/personal-page/commit/23587df))
+* **ui:** add project page ([d88b53a](https://github.com/Redpoint1/personal-page/commit/d88b53a))
+
+
+
 ## [0.1.2](https://github.com/Redpoint1/personal-page/compare/v0.1.1...v0.1.2) (2019-05-06)
 
 
