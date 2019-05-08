@@ -97,14 +97,15 @@ module.exports = {
     subject: "Write a SHORT, IMPERATIVE tense description of the change:\n",
     body:
       'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
-    breaking: "List any BREAKING CHANGES (optional):\n",
+    breaking: "List any NOTES (optional):\n",
     footer:
       "List any ISSUES CLOSED by this change (optional). E.g.: #31, #34:\n",
     confirmCommit: "Are you sure you want to proceed with the commit above?"
   },
 
   allowCustomScopes: true,
-  allowBreakingChanges: ["break", "feat"],
+  breakingPrefix: "NOTES:",
+  allowBreakingChanges: ["break", "change", "feat", "fix"],
   // skip any questions you want
   skipQuestions: ["body", "footer"],
 
