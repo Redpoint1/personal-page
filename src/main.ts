@@ -1,3 +1,8 @@
+// Disabled until they are used
+// import "jquery";
+// import "popper.js";
+// import "bootstrap";
+
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";

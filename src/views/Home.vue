@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container d-flex flex-column h-100 justify-content-center ">
     <div class="row">
       <div class="col d-flex justify-content-around">
         <a href="https://github.com/Redpoint1">
