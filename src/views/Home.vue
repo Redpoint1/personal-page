@@ -1,7 +1,7 @@
 <template>
   <div class="container d-flex flex-column h-100 justify-content-center ">
     <div class="row">
-      <div class="col d-flex justify-content-around">
+      <div class="col-xs-12 col-sm-6 mb-2-sm d-flex justify-content-around">
         <a href="https://github.com/Redpoint1">
           <img
             svg-inline
@@ -10,7 +10,7 @@
           />
         </a>
       </div>
-      <div class="col d-flex justify-content-around">
+      <div class="col-xs-12 col-sm-6 d-flex justify-content-around">
         <a href="https://www.linkedin.com/in/richardrozar/">
           <img
             svg-inline
@@ -27,8 +27,8 @@
 $brand-color: #000;
 
 .brand {
-  height: 25vw;
-  min-height: 100px;
+  height: 50vw;
+  min-height: 125px;
   max-height: 200px;
   transition: fill 0.5s;
   fill: scale-color($brand-color, $lightness: 50%);
