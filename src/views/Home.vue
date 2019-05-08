@@ -24,15 +24,17 @@
 </template>
 
 <style lang="scss">
+$brand-color: #000;
+
 .brand {
   height: 25vw;
   min-height: 100px;
   max-height: 200px;
   transition: fill 0.5s;
-  fill: #777;
+  fill: scale-color($brand-color, $lightness: 50%);
 
   &:hover {
-    fill: #000;
+    fill: $brand-color;
   }
 }
 </style>
