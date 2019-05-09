@@ -1,7 +1,19 @@
 <template>
   <div class="container">
-    <div class="row d-flex align-content-stretch">
-      <div v-for="project in projects" :key="project.id" class="col-lg-6 mb-3">
+    <transition-group
+      tag="div"
+      css="false"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+      class="row d-flex align-content-stretch"
+    >
+      <div
+        v-for="(project, index) in projects"
+        :key="project.id"
+        :data-index="index"
+        class="col-lg-6 mb-3 flip-list-item"
+      >
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">
@@ -16,12 +28,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+
+import * as Velocity from "velocity-animate";
 
 @Component
 export default class Projects extends Vue {
@@ -36,6 +50,27 @@ export default class Projects extends Vue {
       .then(json => {
         this.$data.projects = json;
       });
+  }
+
+  // Methods
+
+  beforeEnter(el: HTMLElement) {
+    el.style.opacity = "0";
+  }
+
+  enter(el: any, done: jquery.velocity.ElementCallback) {
+    var delay = el.dataset["index"] * 100;
+    setTimeout(function() {
+      Velocity.animate(el, { opacity: "1" }, { complete: done });
+    }, delay);
+  }
+
+  leave(el: any, done: jquery.velocity.ElementCallback) {
+    var delay = el.dataset["index"] * 100;
+
+    setTimeout(function() {
+      Velocity.animate(el, { opacity: "0" }, { complete: done });
+    }, delay);
   }
 }
 </script>
