@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.1](https://github.com/Redpoint1/personal-page/compare/v0.2.0...v0.2.1) (2019-05-09)
+
+
+### Changes
+
+* **html:** remove favicon ([7b42970](https://github.com/Redpoint1/personal-page/commit/7b42970))
+* **ui:** add animation for list rendering ([08b5122](https://github.com/Redpoint1/personal-page/commit/08b5122))
+
+
+
 # [0.2.0](https://github.com/Redpoint1/personal-page/compare/v0.1.2...v0.2.0) (2019-05-08)
 
 
