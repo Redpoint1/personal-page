@@ -58,16 +58,19 @@ module.exports = {
 
   scopes: [
     {
-      name: "ui"
+      name: "css"
+    },
+    {
+      name: "html"
     },
     {
       name: "js"
     },
     {
-      name: "css"
+      name: "npm"
     },
     {
-      name: "npm"
+      name: "ui"
     }
   ],
 
