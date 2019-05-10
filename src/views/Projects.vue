@@ -1,5 +1,12 @@
 <template>
   <div class="container">
+    <div class="row" v-if="!projects.length">
+      <div class="col text-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
     <transition-group
       tag="div"
       :css="false"
