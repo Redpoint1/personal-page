@@ -2,7 +2,7 @@
   <div class="container">
     <transition-group
       tag="div"
-      css="false"
+      :css="false"
       @before-enter="beforeEnter"
       @enter="enter"
       @leave="leave"
