@@ -15,7 +15,7 @@
       @before-enter="beforeEnter"
       @enter="enter"
       @leave="leave"
-      class="row d-flex align-content-stretch"
+      class="row align-content-stretch"
     >
       <div
         v-for="(project, index) in projects"
