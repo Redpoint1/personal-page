@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <div class="row" v-if="!projects.length">
-      <div class="col text-center">
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
+  <div class="container h-100">
+    <transition name="fade">
+      <div class="row loading h-100 w-100 align-content-center" v-if="!loaded">
+        <div class="col text-center">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
     <transition-group
       tag="div"
       :css="false"
@@ -47,6 +49,7 @@ import * as Velocity from "velocity-animate";
 @Component
 export default class Projects extends Vue {
   projects = [];
+  loaded = false;
 
   created() {
     if (this.$data.projects.length) return;
@@ -56,6 +59,7 @@ export default class Projects extends Vue {
       })
       .then(json => {
         this.$data.projects = json;
+        this.$data.loaded = true;
       });
   }
 
@@ -81,3 +85,21 @@ export default class Projects extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+.container {
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+}
+
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
