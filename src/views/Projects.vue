@@ -1,5 +1,23 @@
 <template>
   <div class="container h-100">
+    <form class="form-inline">
+      <div class="form-group my-2">
+        <label for="languageFilter" class="mr-1">Language</label>
+        <select
+          id="languageFilter"
+          class="form-control"
+          v-model="filterLanguage"
+        >
+          <option value="">All</option>
+          <option
+            v-for="language in languages"
+            :value="language"
+            :key="language"
+            >{{ language }}</option
+          >
+        </select>
+      </div>
+    </form>
     <transition name="fade">
       <div class="row loading h-100 w-100 align-content-center" v-if="!loaded">
         <div class="col text-center">
@@ -18,10 +36,10 @@
       class="row align-content-stretch"
     >
       <div
-        v-for="(project, index) in projects"
+        v-for="(project, index) in filteredProjects"
         :key="project.id"
         :data-index="index"
-        class="col-lg-6 mb-3 flip-list-item"
+        class="col-lg-6 mb-3 project"
       >
         <div class="card h-100">
           <div class="card-body">
@@ -48,8 +66,13 @@ import * as Velocity from "velocity-animate";
 
 @Component
 export default class Projects extends Vue {
+  // Data
+
   projects = [];
   loaded = false;
+  filterLanguage = "";
+
+  // Lifecycle Hooks
 
   created() {
     if (this.$data.projects.length) return;
@@ -61,6 +84,27 @@ export default class Projects extends Vue {
         this.$data.projects = json;
         this.$data.loaded = true;
       });
+  }
+
+  // Computed
+
+  get filteredProjects() {
+    if (this.$data.filterLanguage) {
+      return this.$data.projects.filter((item: any) => {
+        return item.language === this.$data.filterLanguage;
+      });
+    }
+    return this.$data.projects;
+  }
+
+  get languages() {
+    let languages = new Set();
+    for (let project of this.$data.projects) {
+      if (project.language) {
+        languages.add(project.language);
+      }
+    }
+    return languages;
   }
 
   // Methods
@@ -101,5 +145,9 @@ export default class Projects extends Vue {
 
 .fade-leave-to {
   opacity: 0;
+}
+
+.project {
+  transition: all 100ms;
 }
 </style>
