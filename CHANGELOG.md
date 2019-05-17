@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.2](https://github.com/Redpoint1/personal-page/compare/v0.2.1...v0.2.2) (2019-05-17)
+
+
+### Bug Fixes
+
+* **js:** fix type of value for css tag in transition-group ([0887098](https://github.com/Redpoint1/personal-page/commit/0887098))
+
+
+### Changes
+
+* **ui:** add spinner animation for projects ([f8462e5](https://github.com/Redpoint1/personal-page/commit/f8462e5))
+* **ui:** filter projects by language ([ae2d7db](https://github.com/Redpoint1/personal-page/commit/ae2d7db))
+* **ui:** improve loading animation for projects page ([a5330ba](https://github.com/Redpoint1/personal-page/commit/a5330ba))
+
+
+
 ## [0.2.1](https://github.com/Redpoint1/personal-page/compare/v0.2.0...v0.2.1) (2019-05-09)
 
 
