@@ -39,7 +39,7 @@
         v-for="(project, index) in filteredProjects"
         :key="project.id"
         :data-index="index"
-        class="col-lg-6 mb-3 project"
+        class="col-lg-6 mb-3 fade-leave-active fade-leave-to"
       >
         <div class="card h-100">
           <div class="card-body">
@@ -61,8 +61,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-
-import * as Velocity from "velocity-animate";
 
 @Component
 export default class Projects extends Vue {
@@ -109,22 +107,11 @@ export default class Projects extends Vue {
 
   // Methods
 
-  beforeEnter(el: HTMLElement) {
-    el.style.opacity = "0";
-  }
-
-  enter(el: any, done: jquery.velocity.ElementCallback) {
+  enter(el: any, done: any) {
     var delay = el.dataset["index"] * 100;
     setTimeout(function() {
-      Velocity.animate(el, { opacity: "1" }, { complete: done });
-    }, delay);
-  }
-
-  leave(el: any, done: jquery.velocity.ElementCallback) {
-    var delay = el.dataset["index"] * 100;
-
-    setTimeout(function() {
-      Velocity.animate(el, { opacity: "0" }, { complete: done });
+      el.style.opacity = "1";
+      done();
     }, delay);
   }
 }
@@ -140,14 +127,10 @@ export default class Projects extends Vue {
 }
 
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 }
 
 .fade-leave-to {
   opacity: 0;
-}
-
-.project {
-  transition: all 100ms;
 }
 </style>
