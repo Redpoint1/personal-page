@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.3.0](https://github.com/Redpoint1/personal-page/compare/v0.2.4...v0.3.0) (2020-03-27)
+
+
+### Changes
+
+* **ui:** eN as default language ([16736d3](https://github.com/Redpoint1/personal-page/commit/16736d3))
+
+
+### Features
+
+* **ui:** added i18n ([ab8a5b2](https://github.com/Redpoint1/personal-page/commit/ab8a5b2))
+
+
+
 ## [0.2.4](https://github.com/Redpoint1/personal-page/compare/v0.2.3...v0.2.4) (2020-01-18)
 
 
