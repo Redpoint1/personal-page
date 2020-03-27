@@ -12,7 +12,7 @@ import router from "./router";
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
-  locale: "sk"
+  locale: "en"
 });
 
 Vue.config.productionTip = false;
