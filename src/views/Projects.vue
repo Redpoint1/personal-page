@@ -1,14 +1,31 @@
+<i18n>
+{
+  "en": {
+    "language": "Language",
+    "all": "All",
+    "loading": "Loading",
+    "homepage": "Homepage"
+  },
+  "sk": {
+    "language": "Jazyk",
+    "all": "Všetko",
+    "loading": "Načítavam",
+    "homepage": "Domovská stránka"
+  }
+}
+</i18n>
+
 <template>
   <div class="container h-100">
     <form class="form-inline">
       <div class="form-group my-2">
-        <label for="languageFilter" class="mr-1">Language</label>
+        <label for="languageFilter" class="mr-1">{{ $t("language") }}</label>
         <select
           id="languageFilter"
           class="form-control"
           v-model="filterLanguage"
         >
-          <option value="">All</option>
+          <option value="">{{ $t("all") }}</option>
           <option
             v-for="language in languages"
             :value="language"
@@ -22,7 +39,7 @@
       <div class="row loading h-100 w-100 align-content-center" v-if="!loaded">
         <div class="col text-center">
           <div class="spinner-border" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">{{ $t("loading") }}...</span>
           </div>
         </div>
       </div>
@@ -30,9 +47,7 @@
     <transition-group
       tag="div"
       :css="false"
-      @before-enter="beforeEnter"
       @enter="enter"
-      @leave="leave"
       class="row align-content-stretch"
     >
       <div
@@ -50,7 +65,7 @@
               {{ project.description || "No description" }}
             </h6>
             <div v-if="project.homepage">
-              <a :href="project.homepage">Homepage</a>
+              <a :href="project.homepage">{{ $t("homepage") }}</a>
             </div>
           </div>
         </div>
