@@ -11,13 +11,11 @@
         />
       </v-col>
     </v-row>
-    <template v-if="!loaded">
-      <v-row class="fill-height" align-content="center">
-        <v-col class="text-center">
-          <v-progress-circular indeterminate />
-        </v-col>
-      </v-row>
-    </template>
+    <v-fade-transition>
+      <div class="loader text-center" v-if="!loaded">
+        <v-progress-circular color="black" indeterminate />
+      </div>
+    </v-fade-transition>
     <transition-group
       tag="div"
       :css="false"
@@ -58,7 +56,6 @@ export default class Projects extends Vue {
   // Data
 
   projects = [];
-  loaded = false;
   filterLanguage = "";
 
   // Lifecycle Hooks
@@ -71,7 +68,6 @@ export default class Projects extends Vue {
       })
       .then(json => {
         this.$data.projects = json;
-        this.$data.loaded = true;
       });
   }
 
@@ -100,6 +96,10 @@ export default class Projects extends Vue {
     return Array.from(languages);
   }
 
+  get loaded() {
+    return this.languages.length !== 1;
+  }
+
   // Methods
 
   enter(el: any, done: any) {
@@ -113,6 +113,13 @@ export default class Projects extends Vue {
 </script>
 
 <style lang="scss">
+.loader {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
 .fade-leave-active {
   transition: all 0.5s;
 }
