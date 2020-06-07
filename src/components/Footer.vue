@@ -6,7 +6,7 @@
       ></v-col
     >
     <v-col cols="12" sm="4" align-self="center" class="text-center grey--text"
-      >Copyright &copy; {{ copyright }} <b>{{ author }}</b></v-col
+      >{{ $t("copyright") }} &copy; {{ copyright }} <b>{{ author }}</b></v-col
     >
     <v-col
       cols="12"

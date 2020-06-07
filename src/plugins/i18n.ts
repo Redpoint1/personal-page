@@ -10,7 +10,8 @@ const messages = {
     all: "All",
     loading: "Loading",
     homepage: "Homepage",
-    noDescription: "No description"
+    noDescription: "No description",
+    copyright: "Copyright"
   },
   sk: {
     reportABug: "Nahlásiť chybu",
@@ -20,7 +21,8 @@ const messages = {
     all: "Všetko",
     loading: "Načítavam",
     homepage: "Domovská stránka",
-    noDescription: "Bez popisu"
+    noDescription: "Bez popisu",
+    copyright: "Všetky práva vyhradené"
   }
 };
 
