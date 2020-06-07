@@ -1,7 +1,11 @@
 <template>
-  <v-chip-group v-model="$i18n.locale" mandatory active-class="primary--text">
+  <v-chip-group
+    v-model="$root.$i18n.locale"
+    mandatory
+    active-class="primary--text"
+  >
     <v-chip
-      v-for="lang in $i18n.availableLocales"
+      v-for="lang in $root.$i18n.availableLocales"
       :value="lang"
       :key="lang"
       class="text-uppercase"
@@ -15,7 +19,7 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 
 @Component
 export default class Language extends Vue {
-  @Watch("$i18n.locale")
+  @Watch("$root.$i18n.locale")
   onLocaleChanged(val: string, oldVal: string) {
     localStorage.setItem("lang", val);
   }
