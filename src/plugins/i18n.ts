@@ -9,7 +9,8 @@ const messages = {
     language: "Language",
     all: "All",
     loading: "Loading",
-    homepage: "Homepage"
+    homepage: "Homepage",
+    noDescription: "No description"
   },
   sk: {
     reportABug: "Nahlásiť chybu",
@@ -18,7 +19,8 @@ const messages = {
     language: "Jazyk",
     all: "Všetko",
     loading: "Načítavam",
-    homepage: "Domovská stránka"
+    homepage: "Domovská stránka",
+    noDescription: "Bez popisu"
   }
 };
 
