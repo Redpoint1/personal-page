@@ -1,77 +1,53 @@
-<i18n>
-{
-  "en": {
-    "language": "Language",
-    "all": "All",
-    "loading": "Loading",
-    "homepage": "Homepage"
-  },
-  "sk": {
-    "language": "Jazyk",
-    "all": "Všetko",
-    "loading": "Načítavam",
-    "homepage": "Domovská stránka"
-  }
-}
-</i18n>
-
 <template>
-  <div class="container h-100">
-    <form class="form-inline">
-      <div class="form-group my-2">
-        <label for="languageFilter" class="mr-1">{{ $t("language") }}</label>
-        <select
+  <v-container>
+    <v-row>
+      <v-col cols="12" sm="4" md="3">
+        <v-autocomplete
           id="languageFilter"
-          class="form-control"
+          :label="$t('language')"
+          :items="languages"
           v-model="filterLanguage"
-        >
-          <option value="">{{ $t("all") }}</option>
-          <option
-            v-for="language in languages"
-            :value="language"
-            :key="language"
-            >{{ language }}</option
-          >
-        </select>
-      </div>
-    </form>
-    <transition name="fade">
-      <div class="row loading h-100 w-100 align-content-center" v-if="!loaded">
-        <div class="col text-center">
-          <div class="spinner-border" role="status">
-            <span class="sr-only">{{ $t("loading") }}...</span>
-          </div>
-        </div>
-      </div>
-    </transition>
+          hide-details
+        />
+      </v-col>
+    </v-row>
+    <template v-if="!loaded">
+      <v-row class="fill-height" align-content="center">
+        <v-col class="text-center">
+          <v-progress-circular indeterminate />
+        </v-col>
+      </v-row>
+    </template>
     <transition-group
       tag="div"
       :css="false"
       @enter="enter"
       class="row align-content-stretch"
     >
-      <div
+      <v-col
+        cols="12"
+        sm="6"
         v-for="(project, index) in filteredProjects"
         :key="project.id"
         :data-index="index"
-        class="col-lg-6 mb-3 fade-leave-active fade-leave-to"
+        class="fade-leave-active fade-leave-to"
       >
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a :href="project.html_url">{{ project.name }}</a>
-            </h5>
-            <h6 class="card-subtitle text-muted">
-              {{ project.description || "No description" }}
-            </h6>
-            <div v-if="project.homepage">
-              <a :href="project.homepage">{{ $t("homepage") }}</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <v-card height="100%">
+          <v-card-title
+            ><a :href="project.html_url">{{ project.name }}</a></v-card-title
+          >
+          <v-card-subtitle>{{
+            project.description || "No description"
+          }}</v-card-subtitle>
+          <v-card-actions>
+            <a v-if="project.homepage" :href="project.homepage">{{
+              $t("homepage")
+            }}</a>
+          </v-card-actions>
+        </v-card>
+      </v-col>
     </transition-group>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -111,13 +87,17 @@ export default class Projects extends Vue {
   }
 
   get languages() {
-    let languages = new Set();
+    const all = { text: this.$t("all"), value: "" };
+    const languages = new Set();
+
+    languages.add(all);
+
     for (let project of this.$data.projects) {
       if (project.language) {
-        languages.add(project.language);
+        languages.add({ text: project.language, value: project.language });
       }
     }
-    return languages;
+    return Array.from(languages);
   }
 
   // Methods
@@ -133,14 +113,6 @@ export default class Projects extends Vue {
 </script>
 
 <style lang="scss">
-.container {
-  position: relative;
-}
-
-.loading {
-  position: absolute;
-}
-
 .fade-leave-active {
   transition: all 0.5s;
 }

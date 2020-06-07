@@ -1,34 +1,24 @@
-<i18n>
-{
-  "en": {
-    "reportABug": "Report a bug"
-  },
-  "sk": {
-    "reportABug": "Nahlásiť chybu"
-  }
-}
-</i18n>
-
 <template>
-  <footer id="sticky-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <a :href="bugUrl">{{ $t("reportABug") }}</a>
-        </div>
-        <div class="col text-center">{{ author }} &copy;{{ copyright }}</div>
-        <div class="col text-right">
-          {{ version }}
-        </div>
-      </div>
-    </div>
-  </footer>
+  <v-footer color="white">
+    <v-row>
+      <v-col cols="12" sm="4" class="text-center text-sm-left"
+        ><a :href="bugUrl">{{ $t("reportABug") }}</a></v-col
+      >
+      <v-col cols="12" sm="4" class="text-center"
+        >{{ author }} &copy;{{ copyright }}</v-col
+      >
+      <v-col cols="12" sm="4" class="text-center text-sm-right">{{
+        version
+      }}</v-col>
+    </v-row>
+  </v-footer>
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
-export default class App extends Vue {
+@Component
+export default class Footer extends Vue {
   get author() {
     return process.env.VUE_APP_AUTHOR;
   }

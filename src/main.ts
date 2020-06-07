@@ -4,21 +4,17 @@
 // import "bootstrap";
 
 import Vue from "vue";
-import VueI18n from "vue-i18n";
 
 import App from "./App.vue";
 import router from "./router";
-
-Vue.use(VueI18n);
-
-const i18n = new VueI18n({
-  locale: "en"
-});
+import vuetify from "./plugins/vuetify";
+import i18n from "./plugins/i18n";
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   i18n,
+  vuetify,
   render: h => h(App)
 }).$mount("#app");

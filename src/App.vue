@@ -1,9 +1,11 @@
 <template>
-  <div id="app" class="d-flex flex-column h-100">
+  <v-app>
     <Navigation />
-    <router-view />
+    <v-content>
+      <router-view />
+    </v-content>
     <Footer />
-  </div>
+  </v-app>
 </template>
 
 <script lang="ts">
@@ -20,15 +22,3 @@ import Footer from "@/components/Footer.vue";
 })
 export default class App extends Vue {}
 </script>
-
-<style lang="scss">
-@import "~bootstrap/scss/bootstrap.scss";
-
-main {
-  flex: 1 0 auto;
-}
-
-#sticky-footer {
-  flex-shrink: none;
-}
-</style>
