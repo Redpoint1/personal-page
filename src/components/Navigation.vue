@@ -1,31 +1,11 @@
-<i18n>
-{
-  "en": {
-    "home": "Home",
-    "projects": "Projects"
-  },
-  "sk": {
-    "home": "Domov",
-    "projects": "Projekty"
-  }
-}
-</i18n>
-
 <template>
-  <nav class="navbar navbar-expand navbar-light">
-    <div class="container">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link :to="{ name: 'home' }" class="nav-link">{{
-            $t("home")
-          }}</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'projects' }" class="nav-link">{{
-            $t("projects")
-          }}</router-link>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <v-app-bar app elevate-on-scroll color="white">
+    <v-btn exact text class="mr-2" :to="{ name: 'home' }"
+      ><v-icon>mdi-home</v-icon> {{ $t("home") }}</v-btn
+    >
+
+    <v-btn exact text :to="{ name: 'projects' }"
+      ><v-icon>mdi-github</v-icon>{{ $t("projects") }}</v-btn
+    >
+  </v-app-bar>
 </template>
