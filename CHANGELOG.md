@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.2](https://github.com/Redpoint1/personal-page/compare/v0.3.1...v0.3.2) (2020-06-07)
+
+
+### Changes
+
+* **ui:** migrated from bootstrap to vuetify ([7d5e6d5](https://github.com/Redpoint1/personal-page/commit/7d5e6d5))
+
+
+
 ## [0.3.1](https://github.com/Redpoint1/personal-page/compare/v0.3.0...v0.3.1) (2020-06-06)
 
 
