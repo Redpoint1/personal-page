@@ -1,16 +1,20 @@
 <template>
-  <v-footer color="white">
-    <v-row>
-      <v-col cols="12" sm="4" class="text-center text-sm-left"
-        ><a :href="bugUrl">{{ $t("reportABug") }}</a></v-col
-      >
-      <v-col cols="12" sm="4" class="text-center"
-        >{{ author }} &copy;{{ copyright }}</v-col
-      >
-      <v-col cols="12" sm="4" class="text-center text-sm-right">{{
-        version
-      }}</v-col>
-    </v-row>
+  <v-footer app padless color="transparent">
+    <v-col cols="12" sm="4" align-self="center" class="text-center text-sm-left"
+      ><v-btn text :href="bugUrl" color="grey"
+        ><v-icon left>mdi-bug</v-icon>{{ $t("reportABug") }}</v-btn
+      ></v-col
+    >
+    <v-col cols="12" sm="4" align-self="center" class="text-center grey--text"
+      >Copyright &copy; {{ copyright }} {{ author }}</v-col
+    >
+    <v-col
+      cols="12"
+      sm="4"
+      align-self="center"
+      class="text-center text-sm-right grey--text"
+      >{{ version }}</v-col
+    >
   </v-footer>
 </template>
 
