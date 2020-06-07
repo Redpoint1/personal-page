@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.4.0](https://github.com/Redpoint1/personal-page/compare/v0.3.1...v0.4.0) (2020-06-07)
+
+
+### Bug Fixes
+
+* **ui:** fixed missing i18n for "no description" ([5bddf71](https://github.com/Redpoint1/personal-page/commit/5bddf71))
+
+
+### Changes
+
+* **html:** local deps for material design ([534a6b0](https://github.com/Redpoint1/personal-page/commit/534a6b0))
+* **js:** browser-like scroll behavior for vue-router ([c3f8b5e](https://github.com/Redpoint1/personal-page/commit/c3f8b5e))
+* **js:** use $i18n from the $root vue ([18652b6](https://github.com/Redpoint1/personal-page/commit/18652b6))
+* **security:** cSP nonce for vuetify ([7e9f934](https://github.com/Redpoint1/personal-page/commit/7e9f934))
+* **ui:** added diacritics ([e1f6a1e](https://github.com/Redpoint1/personal-page/commit/e1f6a1e))
+* **ui:** added i18n for copyright ([e044846](https://github.com/Redpoint1/personal-page/commit/e044846))
+* **ui:** improved footer ([a67ab37](https://github.com/Redpoint1/personal-page/commit/a67ab37))
+* **ui:** replaced project's homepage link with v-btn ([7ea106b](https://github.com/Redpoint1/personal-page/commit/7ea106b))
+* **ui:** vuetified loader for projects ([e1f078b](https://github.com/Redpoint1/personal-page/commit/e1f078b))
+* **ui:** white bg for the footer, bolder font for the author ([c768c1a](https://github.com/Redpoint1/personal-page/commit/c768c1a))
+
+
+### Features
+
+* **js:** autodetect browser's preffered language on first-time ([a33286d](https://github.com/Redpoint1/personal-page/commit/a33286d))
+* **ui:** language changer ([ead2753](https://github.com/Redpoint1/personal-page/commit/ead2753))
+* **ui:** migrated from bootstrap to vuetify ([9914dc2](https://github.com/Redpoint1/personal-page/commit/9914dc2))
+
+
+
 ## [0.3.1](https://github.com/Redpoint1/personal-page/compare/v0.3.0...v0.3.1) (2020-06-06)
 
 
