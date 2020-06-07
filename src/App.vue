@@ -14,6 +14,9 @@ import { Component, Vue } from "vue-property-decorator";
 import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
 
+import "@mdi/font/css/materialdesignicons.min.css";
+import "typeface-roboto";
+
 @Component({
   components: {
     Navigation,
