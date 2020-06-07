@@ -38,9 +38,9 @@
             project.description || "No description"
           }}</v-card-subtitle>
           <v-card-actions>
-            <a v-if="project.homepage" :href="project.homepage">{{
+            <v-btn text v-if="project.homepage" :href="project.homepage">{{
               $t("homepage")
-            }}</a>
+            }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
