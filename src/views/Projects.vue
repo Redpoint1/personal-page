@@ -51,7 +51,24 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component
+@Component({
+  i18n: {
+    messages: {
+      en: {
+        language: "Language",
+        all: "All",
+        homepage: "Homepage",
+        noDescription: "No description"
+      },
+      sk: {
+        language: "Jazyk",
+        all: "Všetko",
+        homepage: "Domovská stránka",
+        noDescription: "Bez popisu"
+      }
+    }
+  }
+})
 export default class Projects extends Vue {
   // Data
 

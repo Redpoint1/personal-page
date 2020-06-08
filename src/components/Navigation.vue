@@ -21,6 +21,18 @@ import Language from "@/components/Language.vue";
 @Component({
   components: {
     Language
+  },
+  i18n: {
+    messages: {
+      en: {
+        home: "Home",
+        projects: "Projects"
+      },
+      sk: {
+        home: "Domov",
+        projects: "Projekty"
+      }
+    }
   }
 })
 export default class Navigation extends Vue {}
