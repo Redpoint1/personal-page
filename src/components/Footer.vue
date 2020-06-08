@@ -1,5 +1,5 @@
 <template>
-  <v-footer app padless color="white">
+  <v-footer app absolute padless color="white">
     <v-col cols="12" sm="4" align-self="center" class="text-center text-sm-left"
       ><v-btn text :href="bugUrl" color="grey"
         ><v-icon left>mdi-bug</v-icon>{{ $t("reportABug") }}</v-btn
