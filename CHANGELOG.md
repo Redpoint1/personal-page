@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.2](https://github.com/Redpoint1/personal-page/compare/v0.4.1...v0.4.2) (2020-06-08)
+
+
+### Bug Fixes
+
+* **js:** fixed language changer ([49e5f26](https://github.com/Redpoint1/personal-page/commit/49e5f26))
+
+
+
 ## [0.4.1](https://github.com/Redpoint1/personal-page/compare/v0.4.0...v0.4.1) (2020-06-08)
 
 
