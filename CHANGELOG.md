@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.5.0](https://github.com/Redpoint1/personal-page/compare/v0.4.2...v0.5.0) (2020-06-13)
+
+
+### Changes
+
+* **html:** changed deprecated v-content to v-main ([3235333](https://github.com/Redpoint1/personal-page/commit/3235333))
+* **npm:** removed unnecessary npm packages ([6fff337](https://github.com/Redpoint1/personal-page/commit/6fff337))
+* **ui:** same bg color for header and footer as main ([02cd6f4](https://github.com/Redpoint1/personal-page/commit/02cd6f4))
+
+
+### Features
+
+* **ui:** dark theme ([80eab49](https://github.com/Redpoint1/personal-page/commit/80eab49))
+* **ui:** theme changer ([5123228](https://github.com/Redpoint1/personal-page/commit/5123228))
+
+
+
 ## [0.4.2](https://github.com/Redpoint1/personal-page/compare/v0.4.1...v0.4.2) (2020-06-08)
 
 

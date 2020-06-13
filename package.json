@@ -1,6 +1,6 @@
 {
   "name": "personal-page",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "private": true,
   "author": "Richard Rožár",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "commit": "git-cz",
-    "publish": "git push --tag && conventional-github-releaser -p custom",
+    "publish": "git push --tag && conventional-github-releaser -p custom && git push",
     "release": "standard-version",
     "sync": "rsync --chown www-data:www-data -av --progress ./dist/ root@remote.local:/var/www/html"
   },
