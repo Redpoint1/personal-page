@@ -30,4 +30,10 @@ $brand-color: #000;
     fill: $brand-color;
   }
 }
+
+.theme--dark .brand {
+  &:hover {
+    fill: invert($brand-color);
+  }
+}
 </style>

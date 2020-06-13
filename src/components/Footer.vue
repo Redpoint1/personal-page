@@ -1,12 +1,12 @@
 <template>
-  <v-footer app absolute padless color="white">
+  <v-footer app absolute padless>
     <v-col cols="12" sm="4" align-self="center" class="text-center text-sm-left"
       ><v-btn text :href="bugUrl" color="grey"
         ><v-icon left>mdi-bug</v-icon>{{ $t("reportABug") }}</v-btn
       ></v-col
     >
     <v-col cols="12" sm="4" align-self="center" class="text-center grey--text"
-      >{{ $t("copyright") }} &copy; {{ copyright }} <b>{{ author }}</b></v-col
+      >{{ $t("copyright") }} &copy; {{ copyright }} - <b>{{ author }}</b></v-col
     >
     <v-col
       cols="12"

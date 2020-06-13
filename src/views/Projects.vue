@@ -13,7 +13,7 @@
     </v-row>
     <v-fade-transition>
       <div class="loader text-center" v-if="!loaded">
-        <v-progress-circular color="black" indeterminate />
+        <v-progress-circular indeterminate />
       </div>
     </v-fade-transition>
     <transition-group

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app elevate-on-scroll color="white">
+  <v-app-bar app elevate-on-scroll>
     <v-btn exact text class="mr-2" :to="{ name: 'home' }"
       ><v-icon>mdi-home</v-icon> {{ $t("home") }}</v-btn
     >

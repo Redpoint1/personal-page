@@ -1,9 +1,5 @@
 <template>
-  <v-chip-group
-    v-model="$root.$i18n.locale"
-    mandatory
-    active-class="primary--text"
-  >
+  <v-chip-group v-model="$root.$i18n.locale" mandatory active-class="primary">
     <v-chip
       v-for="lang in $root.$i18n.availableLocales"
       :value="lang"
