@@ -10,17 +10,20 @@
 
     <v-spacer />
 
+    <Theme class="mr-2" />
     <Language />
   </v-app-bar>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Language from "@/components/Language.vue";
+import Language from "./Language.vue";
+import Theme from "./Theme.vue";
 
 @Component({
   components: {
-    Language
+    Language,
+    Theme
   },
   i18n: {
     messages: {

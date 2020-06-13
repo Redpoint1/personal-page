@@ -4,9 +4,9 @@ import Vuetify from "vuetify/lib";
 Vue.use(Vuetify);
 
 function isDarkTheme() {
-  let isDark = JSON.parse(<string>localStorage.getItem("darkTheme"));
+  let isDark = JSON.parse(<string>localStorage.getItem("dark"));
 
-  if (!isDark) {
+  if (typeof isDark !== "boolean") {
     isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
 
