@@ -15,7 +15,7 @@
   </v-container>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $brand-color: #000;
 
 .brand {

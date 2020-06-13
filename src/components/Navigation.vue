@@ -37,3 +37,16 @@ import Language from "@/components/Language.vue";
 })
 export default class Navigation extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+@use "sass:map";
+@import "vuetify/src/styles/styles.sass";
+
+header.theme--light.v-app-bar.v-toolbar {
+  background-color: map.get($material-light, "background");
+}
+
+header.theme--dark.v-app-bar.v-toolbar {
+  background-color: map.get($material-dark, "background");
+}
+</style>

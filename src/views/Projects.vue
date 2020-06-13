@@ -129,7 +129,7 @@ export default class Projects extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .loader {
   position: absolute;
   width: 100%;

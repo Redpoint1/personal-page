@@ -53,3 +53,16 @@ export default class Footer extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@use "sass:map";
+@import "vuetify/src/styles/styles.sass";
+
+.theme--light.v-footer {
+  background-color: map.get($material-light, "background");
+}
+
+.theme--dark.v-footer {
+  background-color: map.get($material-dark, "background");
+}
+</style>
