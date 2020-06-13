@@ -30,41 +30,29 @@
         :data-index="index"
         class="fade-leave-active fade-leave-to"
       >
-        <v-card height="100%">
-          <v-card-title
-            ><a :href="project.html_url">{{ project.name }}</a></v-card-title
-          >
-          <v-card-subtitle>{{
-            project.description || $t("noDescription")
-          }}</v-card-subtitle>
-          <v-card-actions>
-            <v-btn text v-if="project.homepage" :href="project.homepage">{{
-              $t("homepage")
-            }}</v-btn>
-          </v-card-actions>
-        </v-card>
+        <Project class="fill-height" :project="project" />
       </v-col>
     </transition-group>
   </v-container>
 </template>
 
 <script lang="ts">
+import Project from "@/components/Project.vue";
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({
+  components: {
+    Project
+  },
   i18n: {
     messages: {
       en: {
         language: "Language",
-        all: "All",
-        homepage: "Homepage",
-        noDescription: "No description"
+        all: "All"
       },
       sk: {
         language: "Jazyk",
-        all: "Všetko",
-        homepage: "Domovská stránka",
-        noDescription: "Bez popisu"
+        all: "Všetko"
       }
     }
   }
