@@ -1,4 +1,5 @@
 const package = require("./package.json");
+const { VuetifyLoaderPlugin } = require("vuetify-loader");
 
 process.env.VUE_APP_VERSION = package.version;
 process.env.VUE_APP_AUTHOR = package.author;
@@ -10,7 +11,6 @@ module.exports = {
     sourceMap: true
   },
   assetsDir: "static",
-  transpileDependencies: ["vuetify"],
   chainWebpack: config => {
     config.module
       .rule("vue")
