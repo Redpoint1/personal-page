@@ -17,7 +17,12 @@ import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
 
 import "@mdi/font/css/materialdesignicons.min.css";
-import "typeface-roboto";
+import "@fontsource/roboto/100.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import "@fontsource/roboto/900.css";
 
 @Component({
   components: {
@@ -27,3 +32,10 @@ import "typeface-roboto";
 })
 export default class App extends Vue {}
 </script>
+
+<style>
+html,
+body {
+  overflow-y: auto;
+}
+</style>
