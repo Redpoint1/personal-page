@@ -11,7 +11,7 @@
     <v-spacer />
 
     <Theme class="mr-2" />
-    <Language />
+    <div class="language"><Language /></div>
   </v-app-bar>
 </template>
 
@@ -44,6 +44,21 @@ export default class Navigation extends Vue {}
 <style lang="scss" scoped>
 @use "sass:map";
 @import "vuetify/src/styles/styles.sass";
+
+.language {
+  width: 80px;
+  padding-left: 6px;
+  transition: background-color 0.5s;
+  border-radius: 4px;
+}
+
+header.theme--light .language:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header.theme--dark .language:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 header.theme--light.v-app-bar.v-toolbar {
   background-color: map.get($material-light, "background");
