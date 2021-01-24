@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.1](https://github.com/Redpoint1/personal-page/compare/v0.5.0...v0.5.1) (2021-01-24)
+
+
+### Changes
+
+* **js:** new Project component ([fbe4a2a](https://github.com/Redpoint1/personal-page/commit/fbe4a2a))
+* **npm:** bump packages ([5adf5f6](https://github.com/Redpoint1/personal-page/commit/5adf5f6))
+* **ui:** country flags and dropdown for languages ([11cfa02](https://github.com/Redpoint1/personal-page/commit/11cfa02))
+
+
+
 # [0.5.0](https://github.com/Redpoint1/personal-page/compare/v0.4.2...v0.5.0) (2020-06-13)
 
 
