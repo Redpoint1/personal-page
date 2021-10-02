@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-There will be no security updated for older version. It's a personal web page.
+There will be no security update for older versions. It's a personal web page.
 
 | Version | Supported          |
 | ------- | ------------------ |
