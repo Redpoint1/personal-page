@@ -17,7 +17,7 @@ export default new Vuetify({
   theme: {
     dark: isDarkTheme(),
     options: {
-      cspNonce: "ohmygodvuetify5aeWE7q"
-    }
-  }
+      cspNonce: "ohmygodvuetify5aeWE7q",
+    },
+  },
 });

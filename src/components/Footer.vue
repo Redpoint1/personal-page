@@ -26,14 +26,14 @@ import { Component, Vue } from "vue-property-decorator";
     messages: {
       en: {
         reportABug: "Report a bug",
-        copyright: "Copyright"
+        copyright: "Copyright",
       },
       sk: {
         reportABug: "Nahlásiť chybu",
-        copyright: "Všetky práva vyhradené"
-      }
-    }
-  }
+        copyright: "Všetky práva vyhradené",
+      },
+    },
+  },
 })
 export default class Footer extends Vue {
   get author() {

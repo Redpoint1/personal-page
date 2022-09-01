@@ -22,14 +22,14 @@ import { Prop, Component, Vue } from "vue-property-decorator";
     messages: {
       en: {
         homepage: "Homepage",
-        noDescription: "No description"
+        noDescription: "No description",
       },
       sk: {
         homepage: "Domovská stránka",
-        noDescription: "Bez popisu"
-      }
-    }
-  }
+        noDescription: "Bez popisu",
+      },
+    },
+  },
 })
 export default class Projects extends Vue {
   @Prop(Object) readonly project: object | undefined;

@@ -27,8 +27,8 @@ import "@fontsource/roboto/900.css";
 @Component({
   components: {
     Navigation,
-    Footer
-  }
+    Footer,
+  },
 })
 export default class App extends Vue {}
 </script>

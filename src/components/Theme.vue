@@ -8,18 +8,18 @@ import Language from "@/components/Language.vue";
 
 @Component({
   components: {
-    Language
+    Language,
   },
   i18n: {
     messages: {
       en: {
-        dark: "Dark"
+        dark: "Dark",
       },
       sk: {
-        dark: "Tmavý"
-      }
-    }
-  }
+        dark: "Tmavý",
+      },
+    },
+  },
 })
 export default class Theme extends Vue {
   get isDarkTheme() {

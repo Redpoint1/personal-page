@@ -32,7 +32,7 @@ export default class Language extends Vue {
     for (const lang of this.$root.$i18n.availableLocales) {
       items.push({
         value: lang,
-        text: `${this.countryFlag(lang)} ${lang.toUpperCase()}`
+        text: `${this.countryFlag(lang)} ${lang.toUpperCase()}`,
       });
     }
 
@@ -42,7 +42,7 @@ export default class Language extends Vue {
   countryFlag(language: string) {
     const country: Languages = {
       en: "🇬🇧",
-      sk: "🇸🇰"
+      sk: "🇸🇰",
     };
 
     return country[language] ?? "🏴‍☠️"; //pirate fla

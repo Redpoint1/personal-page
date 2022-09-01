@@ -7,15 +7,15 @@ process.env.VUE_APP_COPYRIGHT = new Date().getFullYear();
 
 module.exports = {
   css: {
-    sourceMap: true
+    sourceMap: true,
   },
   assetsDir: "static",
   transpileDependencies: ["vuetify"],
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
       .rule("vue")
       .use("vue-svg-inline-loader")
       .loader("vue-svg-inline-loader")
       .end();
-  }
+  },
 };

@@ -8,6 +8,6 @@ export default new VueI18n({
   fallbackLocale: "en",
   messages: {
     en: {},
-    sk: {}
-  }
+    sk: {},
+  },
 });

@@ -42,20 +42,20 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component({
   components: {
-    Project
+    Project,
   },
   i18n: {
     messages: {
       en: {
         language: "Language",
-        all: "All"
+        all: "All",
       },
       sk: {
         language: "Jazyk",
-        all: "Všetko"
-      }
-    }
-  }
+        all: "Všetko",
+      },
+    },
+  },
 })
 export default class Projects extends Vue {
   // Data
@@ -68,10 +68,10 @@ export default class Projects extends Vue {
   created() {
     if (this.$data.projects.length) return;
     fetch("https://api.github.com/users/Redpoint1/repos?sort=created")
-      .then(response => {
+      .then((response) => {
         return response.json();
       })
-      .then(json => {
+      .then((json) => {
         this.$data.projects = json;
       });
   }
@@ -109,7 +109,7 @@ export default class Projects extends Vue {
 
   enter(el: any, done: any) {
     var delay = el.dataset["index"] * 100;
-    setTimeout(function() {
+    setTimeout(function () {
       el.style.opacity = "1";
       done();
     }, delay);

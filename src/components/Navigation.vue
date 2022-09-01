@@ -23,20 +23,20 @@ import Theme from "./Theme.vue";
 @Component({
   components: {
     Language,
-    Theme
+    Theme,
   },
   i18n: {
     messages: {
       en: {
         home: "Home",
-        projects: "Projects"
+        projects: "Projects",
       },
       sk: {
         home: "Domov",
-        projects: "Projekty"
-      }
-    }
-  }
+        projects: "Projekty",
+      },
+    },
+  },
 })
 export default class Navigation extends Vue {}
 </script>

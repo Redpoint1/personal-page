@@ -14,7 +14,7 @@ Vue.config.productionTip = false;
 
 // "en-US" is the default
 if (i18n.locale === "en-US") {
-  const language = navigator.languages.find(lang => {
+  const language = navigator.languages.find((lang) => {
     return i18n.availableLocales.indexOf(lang) > -1;
   });
 
@@ -26,5 +26,5 @@ new Vue({
   router,
   i18n,
   vuetify,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");
