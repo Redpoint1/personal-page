@@ -6,8 +6,8 @@ There will be no security update for older versions. It's a personal web page.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.5.1   | :white_check_mark: |
-| < 0.5.1 | :x:                |
+| 0.6.0   | :white_check_mark: |
+| < 0.6.0 | :x:                |
 
 ## Reporting a Vulnerability
 
