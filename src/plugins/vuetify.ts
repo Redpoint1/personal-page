@@ -12,6 +12,7 @@ import '@fontsource/roboto/900.css'
 export default createVuetify({
   theme: {
     defaultTheme: localStorage.getItem('dark') === 'true' ? 'dark' : 'light',
+    cspNonce: 'ohmygodvuetify5aeWE7q',
   },
   icons: {
     defaultSet: 'mdi',
