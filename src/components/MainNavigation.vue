@@ -1,12 +1,12 @@
 <template>
   <v-app-bar density="compact" scroll-behavior="elevate" class="px-2">
-    <v-btn exact text class="mr-2" :to="{ name: 'home' }"
-      ><v-icon>mdi-home</v-icon> {{ t('home') }}</v-btn
-    >
+    <v-btn variant="text" class="mr-2" :to="{ name: 'home' }" :prepend-icon="mdiHome">{{
+      t('home')
+    }}</v-btn>
 
-    <v-btn exact text :to="{ name: 'projects' }"
-      ><v-icon>mdi-github</v-icon>{{ t('projects') }}</v-btn
-    >
+    <v-btn variant="text" :to="{ name: 'projects' }" :prepend-icon="mdiGithub">{{
+      t('projects')
+    }}</v-btn>
 
     <v-spacer />
 
@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { mdiHome, mdiGithub } from '@mdi/js'
 import LanguageList from './LanguageList.vue'
 import ThemeSwitch from './ThemeSwitch.vue'
 

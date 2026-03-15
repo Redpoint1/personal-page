@@ -8,7 +8,7 @@ import packageMeta from './package.json'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueDevTools(), vuetify()],
+  plugins: [vue(), vueDevTools(), vuetify({ autoImport: true })],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

@@ -5,7 +5,9 @@
     >
     <v-card-subtitle>{{ project.description || t('noDescription') }}</v-card-subtitle>
     <v-card-actions>
-      <v-btn v-if="project.homepage" text :href="project.homepage">{{ t('homepage') }}</v-btn>
+      <v-btn v-if="project.homepage" variant="text" :href="project.homepage">{{
+        t('homepage')
+      }}</v-btn>
     </v-card-actions>
   </v-card>
 </template>

@@ -2,8 +2,8 @@
   <v-footer class="px-2 d-flex align-end">
     <v-row no-gutters>
       <v-col cols="12" sm="4" align-self="center" class="text-center text-sm-left">
-        <v-btn text :href="bugUrl" variant="text" color="error">
-          <v-icon icon="mdi-bug" start />{{ t('reportABug') }}</v-btn
+        <v-btn variant="text" :href="bugUrl" color="error">
+          <v-icon :icon="mdiBug" start />{{ t('reportABug') }}</v-btn
         >
       </v-col>
       <v-col cols="12" sm="4" align-self="center" class="text-center"
@@ -19,6 +19,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { mdiBug } from '@mdi/js'
 
 const { t } = useI18n({
   locale: 'sk',

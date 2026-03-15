@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^5.2.10",
-    "@mdi/font": "^7.4.47",
     "vue": "^3.5.30",
     "vue-i18n": "11.3.0",
     "vue-router": "^5.0.3",
@@ -40,6 +39,7 @@
     "@commitlint/cli": "^20.4.4",
     "@commitlint/config-angular": "^20.4.4",
     "@commitlint/config-conventional": "^20.4.4",
+    "@mdi/js": "^7.4.47",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^22.19.15",
     "@vitejs/plugin-vue": "^6.0.5",
