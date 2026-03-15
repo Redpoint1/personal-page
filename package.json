@@ -23,7 +23,7 @@
     "commit": "cz",
     "commitlint": "commitlint --edit",
     "publish": "git push --tag && conventional-github-releaser -p custom && git push",
-    "release": "standard-version",
+    "release": "commit-and-tag-version",
     "sync": "rsync --chown www-data:www-data -av --progress ./dist/ root@remote.local:/var/www/html",
     "postinstall": "husky",
     "prepare": "husky"
@@ -46,6 +46,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.7.0",
     "@vue/tsconfig": "^0.9.0",
+    "commit-and-tag-version": "^12.6.1",
     "commitizen": "^4.3.1",
     "conventional-github-releaser": "^3.1.5",
     "cz-conventional-changelog": "^3.3.0",
@@ -57,7 +58,6 @@
     "npm-run-all2": "^8.0.4",
     "prettier": "3.8.1",
     "sass-embedded": "^1.98.0",
-    "standard-version": "^9.5.0",
     "typescript": "^5.9.3",
     "vite": "^8.0.0",
     "vite-plugin-vue-devtools": "^8.1.0",
@@ -70,9 +70,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "standard-version": {
-    "message": "release: %s",
-    "preset": "custom"
   }
 }
