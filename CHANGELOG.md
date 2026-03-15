@@ -1,6 +1,20 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.6.0](https://github.com/Redpoint1/personal-page/compare/v0.5.2...v0.6.0) (2026-03-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Upgraded Vue2 to Vue3
+
+* upgrade to Vue3 / Vuetify3 ([232c93b](https://github.com/Redpoint1/personal-page/commit/232c93b49f6da731c5374c59d5eca55e3e408e63))
+
+
+### Bug Fixes
+
+* fix tsconfig ([b6d61e8](https://github.com/Redpoint1/personal-page/commit/b6d61e8890437c958213e30f8f49b64b4ec3cd04))
 
 ## [0.5.2](https://github.com/Redpoint1/personal-page/compare/v0.5.1...v0.5.2) (2022-09-01)
 
