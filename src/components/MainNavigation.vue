@@ -24,7 +24,6 @@ import LanguageList from './LanguageList.vue'
 import ThemeSwitch from './ThemeSwitch.vue'
 
 const { t } = useI18n({
-  locale: 'sk',
   messages: {
     en: {
       home: 'Home',

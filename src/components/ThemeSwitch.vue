@@ -16,7 +16,6 @@ import { useTheme } from 'vuetify'
 const theme = useTheme()
 
 const { t } = useI18n({
-  locale: 'sk',
   messages: {
     en: {
       dark: 'Dark',

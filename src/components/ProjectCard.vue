@@ -29,7 +29,6 @@ const { project } = defineProps<{
 }>()
 
 const { t } = useI18n({
-  locale: 'sk',
   messages: {
     en: {
       homepage: 'Homepage',

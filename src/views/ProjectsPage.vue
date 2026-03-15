@@ -41,7 +41,6 @@ import { useI18n } from 'vue-i18n'
 import ProjectCard, { type Project } from '@/components/ProjectCard.vue'
 
 const { t } = useI18n({
-  locale: 'sk',
   messages: {
     en: {
       language: 'Language',

@@ -22,7 +22,6 @@ import { useI18n } from 'vue-i18n'
 import { mdiBug } from '@mdi/js'
 
 const { t } = useI18n({
-  locale: 'sk',
   messages: {
     en: {
       reportABug: 'Report a bug',
