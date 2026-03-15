@@ -25,7 +25,6 @@ import ThemeSwitch from './ThemeSwitch.vue'
 
 const { t } = useI18n({
   locale: 'sk',
-  fallbackLocale: 'en',
   messages: {
     en: {
       home: 'Home',

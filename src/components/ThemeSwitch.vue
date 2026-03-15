@@ -17,7 +17,6 @@ const theme = useTheme()
 
 const { t } = useI18n({
   locale: 'sk',
-  fallbackLocale: 'en',
   messages: {
     en: {
       dark: 'Dark',

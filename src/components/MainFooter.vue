@@ -7,8 +7,8 @@
         >
       </v-col>
       <v-col cols="12" sm="4" align-self="center" class="text-center"
-        >{{ t('copyright') }} &copy; {{ copyright }} - <b>{{ author }}</b></v-col
-      >
+        >&copy; {{ copyright }} <b>{{ author }}</b>
+      </v-col>
       <v-col cols="12" sm="4" align-self="center" class="text-center text-sm-right">{{
         version
       }}</v-col>
@@ -23,15 +23,12 @@ import { mdiBug } from '@mdi/js'
 
 const { t } = useI18n({
   locale: 'sk',
-  fallbackLocale: 'en',
   messages: {
     en: {
       reportABug: 'Report a bug',
-      copyright: 'Copyright',
     },
     sk: {
       reportABug: 'Nahlásiť chybu',
-      copyright: 'Všetky práva vyhradené',
     },
   },
 })

@@ -30,7 +30,6 @@ const { project } = defineProps<{
 
 const { t } = useI18n({
   locale: 'sk',
-  fallbackLocale: 'en',
   messages: {
     en: {
       homepage: 'Homepage',
