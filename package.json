@@ -2,16 +2,16 @@
   "name": "personal-vue3",
   "version": "0.6.3",
   "private": true,
-  "author": "Richard Rožár",
+  "bugs": {
+    "url": "https://github.com/Redpoint1/personal-page/issues"
+  },
   "license": "MIT",
+  "author": "Richard Rožár",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Redpoint1/personal-page.git"
   },
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/Redpoint1/personal-page/issues"
-  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -63,16 +63,13 @@
     "vue-eslint-parser": "^10.4.2",
     "vue-tsc": "^3.3.14"
   },
-  "engines": {
-    "node": "^22.18.0 || >=24.12.0"
-  },
-  "overrides": {
-    "typescript": "$typescript"
-  },
-  "packageManager": "bun@1.4.4",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  },
+  "packageManager": "bun@1.4.4"
 }
