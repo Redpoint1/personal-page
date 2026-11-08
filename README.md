@@ -52,6 +52,13 @@ Component messages are plain strings supplied in English and Slovak; the helper
 uses English as a fallback and keeps the selected language in local storage. It
 does not support message interpolation or pluralization.
 
+### Page URLs
+
+The site uses hash-based URLs: `#/` for Home and `#/projects` for Projects.
+These URLs work without server-side route rewrites. Old `/projects` links are
+converted when the server serves the application for that path; without a
+server-side fallback or redirect, those old links may return a 404.
+
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh

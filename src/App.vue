@@ -2,19 +2,28 @@
   <div class="app-shell">
     <MainNavigation />
     <main class="main-content">
-      <RouterView v-slot="{ Component }">
-        <Transition name="page" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </RouterView>
+      <Transition name="page" mode="out-in">
+        <component :is="currentComponent" v-if="currentComponent" />
+      </Transition>
     </main>
     <MainFooter />
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import MainNavigation from '@/components/MainNavigation.vue'
 import MainFooter from '@/components/MainFooter.vue'
+import { usePage } from '@/router'
+import HomePage from '@/views/HomePage.vue'
+import ProjectsPage from '@/views/ProjectsPage.vue'
+
+const page = usePage()
+const currentComponent = computed(() => {
+  if (page.value === 'home') return HomePage
+  if (page.value === 'projects') return ProjectsPage
+  return null
+})
 </script>
 
 <style>

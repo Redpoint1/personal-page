@@ -1,14 +1,24 @@
 <template>
   <header class="site-header">
     <nav class="site-navigation" :aria-label="t('navigation')">
-      <RouterLink class="navigation-link" :to="{ name: 'home' }">
+      <a
+        class="navigation-link"
+        href="#/"
+        :aria-current="page === 'home' ? 'page' : undefined"
+        @click="prepareNavigation"
+      >
         <svg aria-hidden="true" viewBox="0 0 24 24"><path :d="mdiHome" /></svg>
         <span>{{ t('home') }}</span>
-      </RouterLink>
-      <RouterLink class="navigation-link" :to="{ name: 'projects' }">
+      </a>
+      <a
+        class="navigation-link"
+        href="#/projects"
+        :aria-current="page === 'projects' ? 'page' : undefined"
+        @click="prepareNavigation"
+      >
         <svg aria-hidden="true" viewBox="0 0 24 24"><path :d="mdiGithub" /></svg>
         <span>{{ t('projects') }}</span>
-      </RouterLink>
+      </a>
       <div class="navigation-spacer" />
       <ThemeSwitch />
       <LanguageList />
@@ -18,10 +28,12 @@
 
 <script setup lang="ts">
 import { useTranslations } from '@/plugins/i18n'
+import { prepareNavigation, usePage } from '@/router'
 import { mdiHome, mdiGithub } from '@mdi/js'
 import LanguageList from './LanguageList.vue'
 import ThemeSwitch from './ThemeSwitch.vue'
 
+const page = usePage()
 const { t } = useTranslations({
   en: {
     navigation: 'Main navigation',
@@ -68,7 +80,7 @@ const { t } = useTranslations({
 }
 
 .navigation-link:hover,
-.navigation-link.router-link-active {
+.navigation-link[aria-current='page'] {
   background: color-mix(in srgb, currentColor 10%, transparent);
 }
 

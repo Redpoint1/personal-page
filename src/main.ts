@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
 
 const app = createApp(App)
 
@@ -11,4 +10,4 @@ const isDarkTheme =
     : savedTheme === 'true'
 document.documentElement.dataset.theme = isDarkTheme ? 'dark' : 'light'
 
-app.use(router).mount('#app')
+app.mount('#app')
