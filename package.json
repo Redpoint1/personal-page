@@ -18,8 +18,10 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/",
+    "lint": "run-s \"lint:*\"",
+    "lint:oxlint": "oxlint . --fix",
+    "lint:eslint": "eslint . --fix --cache",
+    "format": "oxfmt src/",
     "commit": "cz",
     "commitlint": "commitlint --edit",
     "publish": "git push --tag && conventional-github-releaser -p custom && git push",
@@ -29,6 +31,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@mdi/js": "^7.4.47",
     "vue": "^3.5.45",
     "vue-i18n": "11.4.18",
     "vue-router": "^5.4.0"
@@ -37,11 +40,9 @@
     "@commitlint/cli": "^21.2.4",
     "@commitlint/config-angular": "^21.2.4",
     "@commitlint/config-conventional": "^21.2.4",
-    "@mdi/js": "^7.4.47",
     "@tsconfig/node24": "^24.0.5",
     "@types/node": "^26.6.6",
     "@vitejs/plugin-vue": "^6.0.10",
-    "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.9.0",
     "@vue/tsconfig": "^0.9.1",
     "commit-and-tag-version": "^13.3.0",
@@ -49,20 +50,28 @@
     "conventional-github-releaser": "^3.1.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-oxlint": "~1.92.0",
     "eslint-plugin-vue": "^10.12.0",
     "globals": "^17.14.0",
     "husky": "^9.1.7",
     "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.4",
-    "prettier": "3.9.10",
-    "sass-embedded": "^1.108.1",
-    "typescript": "^5.9.3",
+    "oxfmt": "^0.77.0",
+    "oxlint": "~1.92.0",
+    "typescript": "npm:typescript-native-bridge@latest",
     "vite": "^8.3.6",
     "vite-plugin-vue-devtools": "^8.2.1",
     "vue-eslint-parser": "^10.4.2",
     "vue-tsc": "^3.3.14"
   },
-  "packageManager": "bun@1.2.5",
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  },
+  "overrides": {
+    "typescript": "$typescript"
+  },
+  "packageManager": "bun@1.4.4",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
