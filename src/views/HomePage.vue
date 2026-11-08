@@ -17,21 +17,19 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { useTranslations } from '@/plugins/i18n'
 import { mdiGithub, mdiLinkedin, mdiCalendar } from '@mdi/js'
 
-const { t } = useI18n({
-  messages: {
-    en: {
-      planner: 'Open planner',
-      github: 'GitHub profile',
-      linkedin: 'LinkedIn profile',
-    },
-    sk: {
-      planner: 'Otvoriť plánovač',
-      github: 'Profil na GitHube',
-      linkedin: 'Profil na LinkedIne',
-    },
+const { t } = useTranslations({
+  en: {
+    planner: 'Open planner',
+    github: 'GitHub profile',
+    linkedin: 'LinkedIn profile',
+  },
+  sk: {
+    planner: 'Otvoriť plánovač',
+    github: 'Profil na GitHube',
+    linkedin: 'Profil na LinkedIne',
   },
 })
 </script>

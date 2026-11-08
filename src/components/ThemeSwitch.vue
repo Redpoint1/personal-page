@@ -12,19 +12,17 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { useTranslations } from '@/plugins/i18n'
 import { mdiWhiteBalanceSunny, mdiWeatherNight } from '@mdi/js'
 
-const { t } = useI18n({
-  messages: {
-    en: {
-      switchToLight: 'Switch to Light',
-      switchToDark: 'Switch to Dark',
-    },
-    sk: {
-      switchToLight: 'Prepnúť na svetlý',
-      switchToDark: 'Prepnúť na tmavý',
-    },
+const { t } = useTranslations({
+  en: {
+    switchToLight: 'Switch to Light',
+    switchToDark: 'Switch to Dark',
+  },
+  sk: {
+    switchToLight: 'Prepnúť na svetlý',
+    switchToDark: 'Prepnúť na tmavý',
   },
 })
 

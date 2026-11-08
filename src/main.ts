@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import i18n from '@/plugins/i18n'
 
 const app = createApp(App)
 
@@ -12,4 +11,4 @@ const isDarkTheme =
     : savedTheme === 'true'
 document.documentElement.dataset.theme = isDarkTheme ? 'dark' : 'light'
 
-app.use(router).use(i18n).mount('#app')
+app.use(router).mount('#app')

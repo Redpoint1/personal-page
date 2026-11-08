@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { useTranslations } from '@/plugins/i18n'
 import {
   mdiCodeTags,
   mdiConsole,
@@ -77,16 +77,14 @@ const languageIcons = new Map([
   ['Vue', mdiVuejs],
 ])
 
-const { t } = useI18n({
-  messages: {
-    en: {
-      language: 'Language',
-      loading: 'Loading projects',
-    },
-    sk: {
-      language: 'Jazyk',
-      loading: 'Načítavajú sa projekty',
-    },
+const { t } = useTranslations({
+  en: {
+    language: 'Language',
+    loading: 'Loading projects',
+  },
+  sk: {
+    language: 'Jazyk',
+    loading: 'Načítavajú sa projekty',
   },
 })
 

@@ -17,23 +17,21 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { useTranslations } from '@/plugins/i18n'
 import { mdiHome, mdiGithub } from '@mdi/js'
 import LanguageList from './LanguageList.vue'
 import ThemeSwitch from './ThemeSwitch.vue'
 
-const { t } = useI18n({
-  messages: {
-    en: {
-      navigation: 'Main navigation',
-      home: 'Home',
-      projects: 'Projects',
-    },
-    sk: {
-      navigation: 'Hlavná navigácia',
-      home: 'Domov',
-      projects: 'Projekty',
-    },
+const { t } = useTranslations({
+  en: {
+    navigation: 'Main navigation',
+    home: 'Home',
+    projects: 'Projects',
+  },
+  sk: {
+    navigation: 'Hlavná navigácia',
+    home: 'Domov',
+    projects: 'Projekty',
   },
 })
 </script>

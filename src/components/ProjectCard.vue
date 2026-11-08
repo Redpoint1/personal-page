@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { useTranslations } from '@/plugins/i18n'
 
 export type Project = {
   id: string
@@ -24,16 +24,14 @@ const { project } = defineProps<{
   project: Project
 }>()
 
-const { t } = useI18n({
-  messages: {
-    en: {
-      homepage: 'Homepage',
-      noDescription: 'No description',
-    },
-    sk: {
-      homepage: 'Domovská stránka',
-      noDescription: 'Bez popisu',
-    },
+const { t } = useTranslations({
+  en: {
+    homepage: 'Homepage',
+    noDescription: 'No description',
+  },
+  sk: {
+    homepage: 'Domovská stránka',
+    noDescription: 'Bez popisu',
   },
 })
 </script>

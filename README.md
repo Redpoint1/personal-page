@@ -45,6 +45,13 @@ bun dev
 bun run build
 ```
 
+### Translations
+
+The site uses a lightweight reactive translation helper in `src/plugins/i18n.ts`.
+Component messages are plain strings supplied in English and Slovak; the helper
+uses English as a fallback and keeps the selected language in local storage. It
+does not support message interpolation or pluralization.
+
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh

@@ -7,7 +7,7 @@
       :lang="language.code"
       :aria-label="language.name"
       :aria-pressed="locale === language.code"
-      @click="setLanguage(language.code)"
+      @click="setLocale(language.code)"
     >
       <span aria-hidden="true">{{ language.flag }}</span>
       {{ language.code.toUpperCase() }}
@@ -16,19 +16,18 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+import { setLocale, useLocale, useTranslations } from '@/plugins/i18n'
 
-const { locale, t } = useI18n({ useScope: 'global' })
+const locale = useLocale()
+const { t } = useTranslations({
+  en: { languageSelect: 'Language' },
+  sk: { languageSelect: 'Jazyk' },
+})
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
-]
-
-function setLanguage(language: string) {
-  locale.value = language
-  localStorage.setItem('lang', language)
-}
+] as const
 </script>
 
 <style scoped>
