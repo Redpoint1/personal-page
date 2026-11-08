@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.6.3](https://github.com/Redpoint1/personal-page/compare/v0.6.2...v0.6.3) (2026-11-08)
+
+### Features
+
+* **ui:** add shortcuts for my mini apps ([b7a8eeb](https://github.com/Redpoint1/personal-page/commit/b7a8eebf490dce6867f10c1b98e85a8e7a8e623d))
+
 ## [0.6.2](https://github.com/Redpoint1/personal-page/compare/v0.6.1...v0.6.2) (2026-03-15)
 
 ## [0.6.1](https://github.com/Redpoint1/personal-page/compare/v0.6.0...v0.6.1) (2026-03-15)
