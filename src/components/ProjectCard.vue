@@ -1,15 +1,11 @@
 <template>
-  <v-card>
-    <v-card-title
-      ><a :href="project.html_url">{{ project.name }}</a></v-card-title
-    >
-    <v-card-subtitle>{{ project.description || t('noDescription') }}</v-card-subtitle>
-    <v-card-actions>
-      <v-btn v-if="project.homepage" variant="text" :href="project.homepage">{{
-        t('homepage')
-      }}</v-btn>
-    </v-card-actions>
-  </v-card>
+  <article class="project-card">
+    <h2>
+      <a :href="project.html_url">{{ project.name }}</a>
+    </h2>
+    <p>{{ project.description || t('noDescription') }}</p>
+    <a v-if="project.homepage" :href="project.homepage">{{ t('homepage') }}</a>
+  </article>
 </template>
 
 <script setup lang="ts">
@@ -41,3 +37,27 @@ const { t } = useI18n({
   },
 })
 </script>
+
+<style scoped>
+.project-card {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--surface);
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+p {
+  flex: 1;
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+</style>
